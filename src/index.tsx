@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Clock from './components/clock';
 import reportWebVitals from './reportWebVitals';
 
 // // Rendering a Functional Component
@@ -17,6 +18,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Clock timeZoneDifference={-2} name={'I am a React TypeScript class component with props'} />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
