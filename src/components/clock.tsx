@@ -16,7 +16,7 @@ type ClockState = {
 
    interval: any;
 
-   handleAClockTickBySettingTheState() {
+   handleClockTick() {
        const date = new Date();
        date.setHours(date.getHours() + this.props.timeZoneDifference);
        this.setState({
@@ -28,12 +28,12 @@ type ClockState = {
 
    // Before the component mounts, initialize the state
     componentWillMount() {
-        this.handleAClockTickBySettingTheState();
+        this.handleClockTick();
     }
 
     // After the component did mount, set state on each 1 second tick.
     componentDidMount() {
-        this.interval = setInterval(() => this.handleAClockTickBySettingTheState(), 1000);
+        this.interval = setInterval(() => this.handleClockTick(), 1000);
     }
 
     // Once component unmount remove the timer to avoid memory leaks
