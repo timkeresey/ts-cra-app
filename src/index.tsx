@@ -1,11 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Rendering a Functional Component
+const FunctionalComponent = () => {
+  return (
+    <div>
+    1- I am a stateless React TypeScript functional component</div>
+  )
+};
+
 ReactDOM.render(
   <React.StrictMode>
+    <FunctionalComponent />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
